@@ -26,7 +26,11 @@ I build **scalable web & mobile applications**, mostly with **Node.js, React, an
 - Build **real-time apps**: Chat apps, food ordering platforms, live dashboards  
 - Create **clean, maintainable code** using SOLID principles & design patterns  
 - Work across **front-end & back-end**: React, Redux, Node.js, Express, PostgreSQL, MongoDB, AWS, Firebase
-- Optimize performance with  CI/CD pipelines, and automated testing  
+- Optimize performance with  CI/CD pipelines, and automated testing
+
+
+>  ![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=Raghu-N-Yadav&layout=compact&langs_count=20&count_private=true)
+  
 
 ---
 
