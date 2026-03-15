@@ -2,7 +2,7 @@ name: Generate Snake
 
 on:
   schedule:
-    - cron: "0 */12 * * *"
+    - cron: "0 */12 * * *"  # every 12 hours
   workflow_dispatch:
 
 jobs:
@@ -10,23 +10,43 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      # 1️⃣ Checkout repo
       - name: Checkout repository
         uses: actions/checkout@v3
 
+      # 2️⃣ Configure Git author
       - name: Configure Git
         run: |
           git config --global user.name "Raghu-N-Yadav"
           git config --global user.email "raghu123yadav@gmail.com"
 
-      - uses: Platane/snk@v3
-        with:
-          github_user_name: Raghu-N-Yadav
-          outputs: |
-            dist/github-contribution-grid-snake.svg
+      # 3️⃣ Create output branch if missing
+      - name: Ensure output branch exists
+        run: |
+          git fetch origin output || true
+          if git show-ref --verify --quiet refs/heads/output; then
+            echo "output branch exists locally"
+          else
+            echo "Creating output branch"
+            git checkout -b output || git checkout output
+            git push origin output
+          fi
 
-      - uses: crazy-max/ghaction-github-pages@v3
-        with:
-          target_branch: output
-          build_dir: dist
+      # 4️⃣ Generate Snake SVG
+      - name: Generate Snake
+        run: |
+          mkdir -p dist
+          npx snk@v3 --github_user_name Raghu-N-Yadav --outputs dist/github-contribution-grid-snake.svg
+
+      # 5️⃣ Commit changes
+      - name: Commit Snake update
+        run: |
+          git add dist/github-contribution-grid-snake.svg
+          git commit -m "Snake update: $(date +'%Y-%m-%d %H:%M:%S')" || echo "No changes"
+
+      # 6️⃣ Push to output branch
+      - name: Push to output branch
+        run: |
+          git push origin output
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
