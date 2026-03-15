@@ -21,17 +21,7 @@ jobs:
           git config --global user.email "raghu123yadav@gmail.com"
 
       # 3️⃣ Create output branch if missing
-      - name: Ensure output branch exists
-        run: |
-          git fetch origin output || true
-          if git show-ref --verify --quiet refs/heads/output; then
-            echo "output branch exists locally"
-          else
-            echo "Creating output branch"
-            git checkout -b output || git checkout output
-            git push origin output
-          fi
-
+      
       # 4️⃣ Generate Snake SVG
       - name: Generate Snake
         run: |
