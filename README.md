@@ -48,3 +48,10 @@ I build **scalable web & mobile applications**, mostly with **Node.js, React, an
 [GitHub](https://github.com/Raghu-N-Yadav) | [GitLab](https://gitlab.com/mb-raghu-34-3) | [Portfolio](https://raghunandan-yadav.vercel.app/) | 📧 raghu123yadav@gmail.com  
 
 > “Code is like humor. When you have to explain it, it’s bad.” – **Cory House**
+
+## 🤝 Work Together    
+
+[![PayPal](https://www.paypalobjects.com/webstatic/icon/pp258.png)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=RSQU3J5E42Z84)
+
+
+[![PayPal](https://img.shields.io/badge/PayPal-Subscribe-blue?logo=paypal&logoColor=white)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=RSQU3J5E42Z84)
