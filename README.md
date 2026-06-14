@@ -17,7 +17,7 @@ Here are some ideas to get you started:
 # Hey there 👋, I'm Raghunandan!
 
 I'm a **Full Stack Developer** who loves turning ☕ coffee into code and ideas into real-time apps.  
-I build **scalable web & mobile applications**, mostly with **Node.js, React, and Socket.io**, but I never shy away from trying new tech just for fun.
+I build **scalable web & mobile applications**, mostly with **Node.Js, React.Js, Next.Js and Socket.io**, but I never shy away from trying new tech just for fun.
 
 ---
 
